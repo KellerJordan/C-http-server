@@ -132,7 +132,7 @@ int send_http_response(int fd, char *buf, char *path) {
     bool is_dir = S_ISDIR(path_stat.st_mode);
     bool path_exists = true;
     if (is_dir) {
-        // append / if missing from end
+        // append / to the path if missing from end
         if (path[strlen(path)-1] != '/') {
             strcat(path, "/");
             strcat(printPath, "/");
@@ -189,7 +189,7 @@ int send_http_response(int fd, char *buf, char *path) {
         for (struct dirent *dent = readdir(dir); dent != NULL; dent = readdir(dir)) {
             // assume that filenames do not exceed 256 characters
             char item[300];
-            sprintf(item, "<li>%s</li>", dent->d_name);
+            sprintf(item, "<li><a href=\"%s%s\">%s</a></li>", path, dent->d_name, dent->d_name);
             // if come close to exceeding directory html buffer, just represent the rest with ...
             if (strlen(dirBuf) + strlen(item) > BUFFER_LEN - 100) {
                 sprintf(item, "<li>...[omitted]</li>");
@@ -261,8 +261,7 @@ int send_http_response(int fd, char *buf, char *path) {
     }
     sprintf(buf+strlen(buf), "Content-Length: %d\r\n", contentLen);
 
-    // other things to try to make browser not require close
-    //sprintf(buf+strlen(buf), "Accept-Ranges: bytes\r\n");
+    // keep connection alive to do multiple requests without another TCP handshake
     sprintf(buf+strlen(buf), "Connection: keep-alive\r\n");
 
     int state;
