@@ -17,9 +17,9 @@ The project approximately follows Swarthmore's [CS43 Lab 2](https://www.cs.swart
 
 ## Screenshots
 
-![test page](img/test_page.png)
-
 ![home page](img/home_page.png)
+
+![test page](img/test_page.png)
 
 ![ebook page](img/ebook.png)
 
