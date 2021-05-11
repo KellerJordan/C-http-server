@@ -1,7 +1,7 @@
-default: hello.c
-	gcc hello.c -o lab2 -lpthread
+default: server.c
+	gcc server.c -o lab2 -lpthread
 
-run: hello.c
+run:
 	./lab2 8000 docs --V0 1> out.log
 
 clean:
