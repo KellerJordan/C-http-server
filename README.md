@@ -24,3 +24,6 @@ The project approximately follows Swarthmore's [CS43 Lab 2](https://www.cs.swart
 
 ![ebook page](img/ebook.png)
 
+If you have the server exposed on the internet, you get to see some odd requests.
+![logs](img/logs.png)
+
