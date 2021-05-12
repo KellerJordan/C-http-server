@@ -1,5 +1,5 @@
 # C-http-server
-An implementation of a simple HTTP server in C.
+An implementation of a simple HTTP server in C. The entire thing is in `server.c`.
 
 To build and run the server, just do
 ```
