@@ -14,7 +14,7 @@ This will run the server with default settings:
 * serving from `docs` as root directory
 * printing errors to console and piping output to `out.log`
 
-I am running the server on a new AWS `t2.micro` instance running Amazon Linux 2.
+I am running the server on an AWS `t2.micro` instance running Amazon Linux 2.
 
 The directory `docs` contains several example files and directories. Try reading the server logs after submitting the form at `docs/form.html`.
 
