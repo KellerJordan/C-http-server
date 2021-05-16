@@ -8,7 +8,8 @@ A single-file implementation of a simple HTTP server in C, supporting the follow
 
 To build and run the server, just do
 ```
-make run
+make
+./lab2 8000 docs --V0 1> out.log
 ```
 This will run the server with default settings:
 * on port 8000
