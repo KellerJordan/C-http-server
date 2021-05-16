@@ -3,6 +3,7 @@ A single-file implementation of a simple HTTP server in C, supporting the follow
 * Correct usage of `TCP_CORK` socket option to avoid sending small files in two roundtrips due to [Nagle's algorithm](https://en.wikipedia.org/wiki/Nagle%27s_algorithm).
 * Acceptance of multiple connections via multithreading (no thread pool, however).
 * Serving of directories and `index.html` files when available.
+* File not found results in `docs/404.html` being served, with appropriate HTTP response header.
 * Fairly high-quality logging.
 
 To build and run the server, just do
