@@ -6,6 +6,8 @@ A single-file implementation of a simple HTTP server in C, supporting the follow
 * File not found results in `docs/404.html` being served, with appropriate HTTP response header.
 * Fairly high-quality logging.
 
+Warning: very insecure, e.g. to directory traversal attack.
+
 To build and run the server, just do
 ```
 make run
